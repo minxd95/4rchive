@@ -9,7 +9,7 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<"dark" | "light">("light");
   return (
     <button
-      className={styles.themeToggle}
+      className="relative w-[60px] h-[32px] rounded-[16px] border border-black flex items-center"
       onClick={() =>
         setTheme((prev) => {
           if (prev === "light") return "dark";
@@ -22,18 +22,18 @@ export default function ThemeToggle() {
         alt="moon icon"
         width={16}
         height={16}
-        className={styles.moonIcon}
+        className="absolute left-2"
       />
       <Image
         src={images.sun}
         alt="sun icon"
         width={20}
         height={20}
-        className={styles.sunIcon}
+        className="absolute right-[6px]"
       />
       <div
-        className={`${styles.bigDot} ${
-          theme === "dark" ? styles.bigDotDark : styles.bigDotLight
+        className={`w-6 h-6 rounded-[12px] bg-black absolute transition-[left] duration-200 ${
+          theme === "light" ? "left-1" : "left-8"
         }`}
       />
     </button>
