@@ -18,7 +18,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="relative w-[60px] h-[32px] rounded-[16px] border border-black dark:border-white flex items-center"
+      className="relative w-[3.75rem] h-[2rem] rounded-[1rem] border border-black dark:border-white flex items-center"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       <Image
@@ -33,10 +33,10 @@ export default function ThemeToggle() {
         alt="sun icon"
         width={20}
         height={20}
-        className="absolute right-[6px]"
+        className="absolute right-[0.375rem]"
       />
       <div
-        className={`w-6 h-6 rounded-[12px] bg-black dark:bg-white absolute transition-[left,background] duration-200 ${
+        className={`w-6 h-6 rounded-[0.75rem] bg-black dark:bg-white absolute transition-[left,background] duration-200 ${
           resolvedTheme === "light" ? "left-1" : "left-8"
         }`}
       />

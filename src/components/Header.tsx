@@ -7,14 +7,16 @@ import SearchButton from "./SearchButton";
 
 export default async function Header() {
   return (
-    <div className="h-[72px] w-[100vw] flex justify-between items-center px-5">
+    <div className="h-[4.5rem] w-full flex justify-between items-center px-5">
       <div className="flex gap-9">
         <Link href="/">
-          <span className={`${inter.className} text-[28px] font-bold !italic`}>
+          <span
+            className={`${inter.className} text-[1.75rem] font-bold !italic`}
+          >
             4rchive :)
           </span>
         </Link>
-        <nav className="flex items-end -translate-y-[4px]">
+        <nav className="flex items-end -translate-y-[0.25rem]">
           <ul className="flex gap-9">
             <li>
               <Link href="/">Home</Link>
