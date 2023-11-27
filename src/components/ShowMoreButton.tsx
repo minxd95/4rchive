@@ -8,12 +8,12 @@ interface ButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export default function Button({ text, onClick }: ButtonProps) {
+export default function ShowMoreButton({ text, onClick }: ButtonProps) {
   const { resolvedTheme } = useTheme();
 
   return (
     <button
-      className={`w-40 h-[2.25rem] rounded-[1.25rem] border ${
+      className={`w-full sm:w-40 h-[2.25rem] rounded-[1.25rem] border ${
         resolvedTheme === "light" ? "border-black" : "border-white"
       }`}
       onClick={onClick}

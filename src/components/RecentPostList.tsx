@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, PostItem } from "@/components";
+import { ShowMoreButton, PostItem } from "@/components";
 import { useWindowSize } from "@/hooks";
 
 interface RecentPostListProps {
@@ -24,7 +24,7 @@ export default function RecentPostList({ posts }: RecentPostListProps) {
           <PostItem type="mobile" />
         </div>
         <div className="flex justify-end mt-[2.25rem]">
-          <Button text="Show More" onClick={() => alert(123)} />
+          <ShowMoreButton text="Show More" onClick={() => alert(123)} />
         </div>
       </div>
     );
@@ -41,7 +41,7 @@ export default function RecentPostList({ posts }: RecentPostListProps) {
         <PostItem type="small" />
       </div>
       <div className="flex justify-end mt-[2.25rem]">
-        <Button text="Show More" onClick={() => alert(123)} />
+        <ShowMoreButton text="Show More" onClick={() => alert(123)} />
       </div>
     </div>
   );

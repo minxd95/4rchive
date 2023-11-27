@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import ThemeToggle from "@/components/ThemeToggle";
 import Providers from "@/components/Providers";
 import WelcomeText from "@/components/WelcomeText";
-import Button from "@/components/Button";
+import ShowMoreButton from "@/components/ShowMoreButton";
 import RecentPostList from "@/components/RecentPostList";
 import PostItem from "@/components/PostItem";
 import Menu from "@/components/Menu";
@@ -12,7 +12,7 @@ export {
   ThemeToggle,
   Providers,
   WelcomeText,
-  Button,
+  ShowMoreButton,
   RecentPostList,
   PostItem,
   Menu,
