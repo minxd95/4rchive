@@ -1,22 +1,20 @@
-"use server";
-
 import { inter } from "@/assets/fonts";
 import Link from "next/link";
-import { ThemeToggle } from "@/components";
+import { Menu, ThemeToggle } from "@/components";
 import SearchButton from "./SearchButton";
 
 export default async function Header() {
   return (
-    <div className="h-[4.5rem] w-full flex justify-between items-center px-5">
-      <div className="flex gap-9">
+    <header className="h-[3.75rem] sm:h-[4.5rem] w-full flex justify-between items-center px-4 sm:px-5 transition-[height] duration-200">
+      <div className="flex gap-9 items-baseline">
         <Link href="/">
           <span
-            className={`${inter.className} text-[1.75rem] font-bold !italic`}
+            className={`${inter.className} text-[1.25rem] sm:text-[1.75rem] font-bold !italic transition-[font-size] duration-200`}
           >
             4rchive :)
           </span>
         </Link>
-        <nav className="flex items-end -translate-y-[0.25rem]">
+        <nav className="hidden sm:block">
           <ul className="flex gap-9">
             <li>
               <Link href="/">Home</Link>
@@ -32,10 +30,11 @@ export default async function Header() {
           </ul>
         </nav>
       </div>
-      <div className="flex gap-3">
+      <div className="flex items-center gap-3">
         <SearchButton />
         <ThemeToggle />
+        <Menu />
       </div>
-    </div>
+    </header>
   );
 }

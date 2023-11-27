@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { pretendard } from "@/assets/fonts";
 import { Header, Providers } from "@/components";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "4rchive - Minseok's tech blog",
@@ -16,11 +17,12 @@ export default function RootLayout({
   return (
     <html className="light" style={{ colorScheme: "light" }}>
       <body
-        className={`${pretendard.className} text-black dark:text-white bg-white dark:bg-black transition-[background] duration-200`}
+        className={`${pretendard.className} min-w-screen min-h-screen text-black dark:text-white bg-white dark:bg-black transition-[background] duration-200`}
       >
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -1,9 +1,12 @@
-import { WelcomeText } from "@/components";
+import { RecentPostList, WelcomeText } from "@/components";
 
 export default function Home() {
   return (
-    <main className="w-[56.25rem] mx-auto pt-[4.5rem]">
-      <WelcomeText />
+    <main className="max-w-[58.25rem] mx-auto px-4">
+      <div className="mt-[4.5rem]">
+        <WelcomeText />
+      </div>
+      <RecentPostList />
     </main>
   );
 }
