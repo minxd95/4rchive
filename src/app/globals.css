@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* syntax highlighting */
+@import url(./atom-one-dark.min.css);
+
 html {
   /* next-themes의 color-scheme 추가로 인해 브라우저에서 자동으로 색상을 바꾸는 것을 방지 */
   color-scheme: normal !important;
