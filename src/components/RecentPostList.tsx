@@ -4,25 +4,25 @@ import { ShowMoreButton, PostItem } from "@/components";
 import { useWindowSize } from "@/hooks";
 
 interface RecentPostListProps {
-  posts?: {
+  posts: {
     slug: string;
     title: string;
     date: string;
-    contents: string;
-  };
+    coverImage: string;
+  }[];
 }
 
 export default function RecentPostList({ posts }: RecentPostListProps) {
   const windowSize = useWindowSize();
 
+  if (!posts.length) return null;
   if (windowSize.width && windowSize.width < 640) {
     return (
       <div>
         <div className="mt-[4.5rem] flex flex-col gap-y-12">
-          <PostItem type="mobile" />
-          <PostItem type="mobile" />
-          <PostItem type="mobile" />
-          <PostItem type="mobile" />
+          {posts.map((post) => (
+            <PostItem key={post.slug} type="mobile" post={post} />
+          ))}
         </div>
         <div className="flex justify-end mt-[2.25rem]">
           <ShowMoreButton text="Show More" onClick={() => alert(123)} />
@@ -33,13 +33,12 @@ export default function RecentPostList({ posts }: RecentPostListProps) {
   return (
     <div>
       <div className="mt-[6.25rem]">
-        <PostItem type="large" />
+        <PostItem type="large" post={posts[0]} />
       </div>
       <div className="mt-[4.5rem] flex justify-between flex-wrap gap-y-12">
-        <PostItem type="small" />
-        <PostItem type="small" />
-        <PostItem type="small" />
-        <PostItem type="small" />
+        {posts.slice(1).map((post) => (
+          <PostItem key={post.slug} type="small" post={post} />
+        ))}
       </div>
       <div className="flex justify-end mt-[2.25rem]">
         <ShowMoreButton text="Show More" onClick={() => alert(123)} />

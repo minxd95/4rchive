@@ -6,6 +6,7 @@ import ShowMoreButton from "@/components/ShowMoreButton";
 import RecentPostList from "@/components/RecentPostList";
 import PostItem from "@/components/PostItem";
 import Menu from "@/components/Menu";
+import PostBody from "@/components/PostBody";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   RecentPostList,
   PostItem,
   Menu,
+  PostBody,
 };
