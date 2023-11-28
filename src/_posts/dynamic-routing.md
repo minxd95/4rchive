@@ -15,6 +15,8 @@ Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidu
 
 Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
 
+![서울시](https://postfiles.pstatic.net/MjAxOTEyMDVfMTg2/MDAxNTc1NTA1MDk4Nzc1.dGbNlc3194jR3CS86MVC38TK7WX7jYlvab6GKPJUXOwg.wE6FTqSfTuH8cMdWvBhkfmmwfJrEK7AuSvF-5Q8WVWwg.JPEG.appcomo/%EC%84%9C%EC%9A%B8%EC%8B%9C%EC%8B%AC%EB%B3%BC.jpg?type=w773)
+
 ```js
 const a = 1;
 const a = 1;

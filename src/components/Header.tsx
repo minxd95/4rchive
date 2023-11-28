@@ -1,6 +1,6 @@
 import { inter } from "@/assets/fonts";
 import Link from "next/link";
-import { Menu, ThemeToggle } from "@/components";
+import { MenuButton, ThemeToggle } from "@/components";
 import SearchButton from "./SearchButton";
 
 export default async function Header() {
@@ -33,7 +33,7 @@ export default async function Header() {
       <div className="flex items-center gap-3">
         <SearchButton />
         <ThemeToggle />
-        <Menu />
+        <MenuButton />
       </div>
     </header>
   );
