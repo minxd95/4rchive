@@ -5,6 +5,7 @@ import { useWindowSize } from "@/hooks";
 
 interface RecentPostListProps {
   posts?: {
+    slug: string;
     title: string;
     date: string;
     contents: string;

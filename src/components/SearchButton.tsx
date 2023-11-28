@@ -16,7 +16,7 @@ export default function SearchButton() {
 
   return (
     <Link
-      href="/search"
+      href="/posts"
       className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-black dark:border-white flex justify-center items-center transition-[width,height] duration-200"
     >
       <Image

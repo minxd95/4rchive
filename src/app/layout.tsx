@@ -17,11 +17,13 @@ export default function RootLayout({
   return (
     <html className="light" style={{ colorScheme: "light" }}>
       <body
-        className={`${pretendard.className} min-w-screen min-h-screen text-black dark:text-white bg-white dark:bg-black transition-[background] duration-200`}
+        className={`${pretendard.className} relative min-w-screen min-h-screen text-black dark:text-white bg-white dark:bg-black`}
       >
         <Providers>
           <Header />
-          {children}
+          <main className="min-w-screen min-h-screen pt-[3.75rem] sm:pt-[4.5rem] pb-[29.625rem] sm:pb-[24.9375rem] z-0">
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>

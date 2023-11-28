@@ -5,7 +5,7 @@ import SearchButton from "./SearchButton";
 
 export default async function Header() {
   return (
-    <header className="h-[3.75rem] sm:h-[4.5rem] w-full flex justify-between items-center px-4 sm:px-5 transition-[height] duration-200">
+    <header className="border-b-2 border-gray-100 dark:border-gray-800 bg-inherit fixed h-[3.75rem] sm:h-[4.5rem] w-full flex justify-between items-center px-4 sm:px-5 transition-[height] duration-200 z-10">
       <div className="flex gap-9 items-baseline">
         <Link href="/">
           <span

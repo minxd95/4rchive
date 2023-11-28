@@ -17,7 +17,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="mb-[3.125rem] flex flex-col items-center mt-[8.75rem]">
+    <footer className="absolute w-full bottom-0 mb-[3.125rem] flex flex-col items-center mt-[8.75rem]">
       <div className="flex flex-col sm:flex-row items-center">
         <div className="relative w-[7.5rem] h-[7.5rem]">
           <Image
