@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html className="light" style={{ colorScheme: "light" }}>
       <body
-        className={`${pretendard.className} relative min-w-screen min-h-screen text-black dark:text-white bg-white dark:bg-black`}
+        className={`${pretendard.className} relative min-w-screen min-h-screen text-gray-700 dark:text-gray-50 bg-white dark:bg-black`}
       >
         <Providers>
           <Header />
