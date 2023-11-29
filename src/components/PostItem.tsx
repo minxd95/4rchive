@@ -4,7 +4,13 @@ import { format, parseISO } from "date-fns";
 
 interface PostItemProps {
   type: "large" | "small" | "mobile";
-  post: { slug: string; title: string; date: string; coverImage: string };
+  post: {
+    slug: string;
+    title: string;
+    date: string;
+    coverImage: string;
+    excerpt: string;
+  };
 }
 export default function PostItem({ type, post }: PostItemProps) {
   const parsedDate = format(parseISO(post.date), "yyyy. MM. dd.");
@@ -24,6 +30,9 @@ export default function PostItem({ type, post }: PostItemProps) {
             className="rounded-[1.25rem]"
             // placeholder="blur"
           />
+          <div className="flex items-center p-4 absolute top-0 w-full h-full bg-black bg-opacity-50 rounded-[1.25rem] opacity-0 hover:opacity-100 transition-opacity duration-200">
+            <span className="text-white">{post.excerpt}</span>
+          </div>
         </div>
         <div
           className={`flex ${type === "large" ? "flex-row" : "flex-col"} ${

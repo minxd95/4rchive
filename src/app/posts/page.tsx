@@ -1,3 +1,5 @@
+import { SearchPostsTemplate } from "@/components";
+import { getAllPosts } from "@/lib/api";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +8,14 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <></>;
+  const allPosts = getAllPosts([
+    "slug",
+    "title",
+    "date",
+    "coverImage",
+    "content",
+    "excerpt",
+  ]);
+
+  return <SearchPostsTemplate allPosts={allPosts} />;
 }
