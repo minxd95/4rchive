@@ -1,5 +1,6 @@
-import { PostBody } from "@/components";
+import { PostBody, TableOfContents } from "@/components";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
+import getTableOfContents from "@/lib/getTableOfContents";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { format, parseISO } from "date-fns";
 import { Metadata } from "next";
@@ -16,28 +17,36 @@ export default async function Page({ params }: { params: { slug: string } }) {
     "coverImage",
   ]);
   const content = await markdownToHtml(post.content || "");
+  const headings = getTableOfContents(content);
 
   return (
-    <div className="flex flex-col max-w-[52rem] mx-auto px-4">
+    <div className="flex max-w-[70.75rem] mx-auto px-4">
       <div className="flex flex-col">
-        <span className="mt-[4.5rem] text-[2.25rem] font-extrabold leading-[2.75rem]">
-          {post.title}
-        </span>
-        <span className="mt-2 font-bold">
-          {format(parseISO(post.date), "yyyy. MM. dd.")}
-        </span>
-      </div>
-      <div className="mt-5">
-        <div className="relative w-full aspect-[3/2]">
-          <Image
-            src={post.coverImage}
-            alt="hero"
-            className="rounded-[1.25rem]"
-            fill
-            objectFit="cover"
-          />
+        <div className="flex flex-col">
+          <span className="mt-[4.5rem] text-[2.25rem] font-extrabold leading-[2.75rem]">
+            {post.title}
+          </span>
+          <span className="mt-2 font-bold">
+            {format(parseISO(post.date), "yyyy. MM. dd.")}
+          </span>
         </div>
-        <PostBody content={content} />
+        <div className="mt-5">
+          <div className="relative w-full aspect-[3/2]">
+            <Image
+              src={post.coverImage}
+              alt="hero"
+              className="rounded-[1.25rem]"
+              fill
+              objectFit="cover"
+            />
+          </div>
+          <PostBody content={content} />
+        </div>
+      </div>
+      <div className="hidden lg:block">
+        <div className="sticky w-[15.625rem] ml-[7.5rem] top-[9.375rem]">
+          <TableOfContents headings={headings} />
+        </div>
       </div>
     </div>
   );

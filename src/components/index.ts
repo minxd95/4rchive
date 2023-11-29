@@ -10,6 +10,7 @@ import PostBody from "@/components/PostBody";
 import Menu from "@/components/Menu";
 import SearchPostsTemplate from "@/components/SearchPostsTemplate";
 import SearchBar from "@/components/SearchBar";
+import TableOfContents from "@/components/TableOfContents";
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   Menu,
   SearchPostsTemplate,
   SearchBar,
+  TableOfContents,
 };
