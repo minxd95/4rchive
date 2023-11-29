@@ -1,16 +1,15 @@
 "use client";
 
 import images from "@/assets/images";
-import { IsShowMenuState } from "@/recoil/atoms";
+import { useMenu } from "@/hooks";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useSetRecoilState } from "recoil";
 
 export default function MenuButton() {
   const { resolvedTheme } = useTheme();
 
-  const setIsShowMenu = useSetRecoilState(IsShowMenuState);
+  const { toggleMenu } = useMenu();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -21,7 +20,7 @@ export default function MenuButton() {
 
   return (
     <button
-      onClick={() => setIsShowMenu((prev) => !prev)}
+      onClick={() => toggleMenu()}
       className="w-6 h-6 relative block sm:hidden ml-1"
     >
       <Image

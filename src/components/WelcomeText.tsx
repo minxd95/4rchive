@@ -8,7 +8,7 @@ export default function WelcomeText() {
       >
         Welcome to 4rchive :)
       </span>
-      <span className="mt-4 font-medium text-[0.75rem] sm:text-[1rem] lg:text-[1.25rem] transition-[font-size] duration-200">
+      <span className="mt-4 font-medium text-base lg:text-[1.25rem] transition-[font-size] duration-200">
         Minseok’s Tech Blog
       </span>
     </div>
