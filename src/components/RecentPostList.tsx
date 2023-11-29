@@ -21,7 +21,8 @@ export default function RecentPostList({ posts }: RecentPostListProps) {
 
   if (!posts.length) return null;
 
-  const shownItemCount = 5 + index * 4;
+  // const shownItemCount = 5 + index * 4;
+  const shownItemCount = 4 + index * 4;
 
   if (windowSize.width && windowSize.width < MOBILE_MAX) {
     return (
@@ -41,11 +42,14 @@ export default function RecentPostList({ posts }: RecentPostListProps) {
   }
   return (
     <div>
-      <div className="mt-[6.25rem]">
+      {/* <div className="mt-[6.25rem]">
         <PostItem type="large" post={posts[0]} />
-      </div>
+      </div> */}
       <div className="mt-[4.5rem] flex justify-between flex-wrap gap-y-12">
-        {posts.slice(1, shownItemCount).map((post) => (
+        {/* {posts.slice(1, shownItemCount).map((post) => (
+          <PostItem key={post.slug} type="small" post={post} />
+        ))} */}
+        {posts.slice(0, shownItemCount).map((post) => (
           <PostItem key={post.slug} type="small" post={post} />
         ))}
       </div>
