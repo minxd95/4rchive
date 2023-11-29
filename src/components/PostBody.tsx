@@ -1,3 +1,4 @@
+import Comments from "@/components/Comments";
 import styles from "./PostBody.module.css";
 
 interface PostBodyProps {
@@ -11,6 +12,9 @@ const PostBody = ({ content }: PostBodyProps) => {
         className={styles["markdown"]}
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <div className="mt-24">
+        <Comments />
+      </div>
     </div>
   );
 };
