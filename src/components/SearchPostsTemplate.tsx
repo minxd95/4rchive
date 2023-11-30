@@ -25,9 +25,8 @@ export default function SearchPostsTemplate({
 }: SearchPostsTemplateProps) {
   const windowSize = useWindowSize();
   const [filter, setFilter] = useState<string>("");
-  const [filteredList, setFilteredList] = useState<
-    SearchPostsTemplateProps["allPosts"]
-  >([]);
+  const [filteredList, setFilteredList] =
+    useState<SearchPostsTemplateProps["allPosts"]>(allPosts);
   const [index, setIndex] = useState(0);
 
   const shownItemCount = 4 + index * 4;

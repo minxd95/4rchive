@@ -22,7 +22,7 @@ export default function RootLayout({
         <Providers>
           <Menu />
           <Header />
-          <main className="min-w-screen min-h-screen pt-[3.75rem] sm:pt-[4.5rem] pb-[29.625rem] sm:pb-[24.9375rem] z-0">
+          <main className="min-w-screen min-h-screen pt-[3.75rem] sm:pt-[4.5rem] pb-[7.25rem] z-0">
             {children}
           </main>
           <Footer />

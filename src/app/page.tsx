@@ -1,4 +1,4 @@
-import { RecentPostList, PageTitleText } from "@/components";
+import { RecentPostList, PageTitleText, Profile } from "@/components";
 import { getAllPosts } from "@/lib/api";
 
 export default async function Home() {
@@ -13,6 +13,9 @@ export default async function Home() {
         />
       </div>
       <RecentPostList posts={posts} />
+      <div className="flex justify-center mt-20 mb-0 sm:mt-20 sm:mb-20">
+        <Profile />
+      </div>
     </div>
   );
 }

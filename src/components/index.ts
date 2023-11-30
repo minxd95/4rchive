@@ -11,6 +11,7 @@ import Menu from "@/components/Menu";
 import SearchPostsTemplate from "@/components/SearchPostsTemplate";
 import SearchBar from "@/components/SearchBar";
 import TableOfContents from "@/components/TableOfContents";
+import Profile from "@/components/Profile";
 
 export {
   Header,
@@ -26,4 +27,5 @@ export {
   SearchPostsTemplate,
   SearchBar,
   TableOfContents,
+  Profile,
 };
