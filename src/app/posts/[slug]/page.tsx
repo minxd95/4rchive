@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div className="flex max-w-[70.75rem] mx-auto px-4">
       <div className="flex flex-col">
         <div className="flex flex-col">
-          <span className="mt-[4.5rem] text-[2.25rem] font-extrabold leading-[2.75rem]">
+          <span className="mt-[2.25rem] sm:mt-[4.5rem] text-[2.25rem] font-extrabold leading-[2.75rem]">
             {post.title}
           </span>
           <span className="mt-2 font-bold">
@@ -35,9 +35,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <Image
               src={post.coverImage}
               alt="hero"
-              className="rounded-[1.25rem]"
+              className="rounded-[1.25rem] object-cover"
               fill
-              objectFit="cover"
             />
           </div>
           <PostBody content={content} />
@@ -54,11 +53,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
 export const dynamicParams = false;
 
-type Props = {
+export async function generateMetadata({
+  params,
+}: {
   params: { slug: string };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+}): Promise<Metadata> {
   // read route params
   const slug = params.slug;
 

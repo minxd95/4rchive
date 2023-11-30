@@ -3,16 +3,11 @@
 import { ShowMoreButton, PostItem } from "@/components";
 import { MOBILE_MAX } from "@/constants";
 import { useWindowSize } from "@/hooks";
+import { TPostItem } from "@/types";
 import { useState } from "react";
 
 interface RecentPostListProps {
-  posts: {
-    slug: string;
-    title: string;
-    date: string;
-    coverImage: string;
-    excerpt: string;
-  }[];
+  posts: TPostItem[];
 }
 
 export default function RecentPostList({ posts }: RecentPostListProps) {

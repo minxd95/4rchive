@@ -8,17 +8,11 @@ import {
 } from "@/components";
 import { MOBILE_MAX } from "@/constants";
 import { useWindowSize } from "@/hooks";
+import { TSearchPostItem } from "@/types";
 import { useEffect, useState } from "react";
 
 interface SearchPostsTemplateProps {
-  allPosts: {
-    slug: string;
-    title: string;
-    date: string;
-    coverImage: string;
-    content: string;
-    excerpt: string;
-  }[];
+  allPosts: TSearchPostItem[];
 }
 export default function SearchPostsTemplate({
   allPosts,

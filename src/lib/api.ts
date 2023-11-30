@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import { IPost } from "@/types";
 
 const postsDirectory = join(process.cwd(), "/src/_posts");
 
@@ -8,27 +9,13 @@ export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
 }
 
-type Fields =
-  | "slug"
-  | "title"
-  | "excerpt"
-  | "coverImage"
-  | "date"
-  | "author"
-  | "ogImage"
-  | "content";
-
-export function getPostBySlug(slug: string, fields: Fields[] = []) {
+export function getPostBySlug(slug: string, fields: Array<keyof IPost> = []) {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  type Items = {
-    [key in Fields]: string;
-  };
-
-  const items: Items = {} as Items;
+  const items: IPost = {} as IPost;
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
@@ -47,7 +34,7 @@ export function getPostBySlug(slug: string, fields: Fields[] = []) {
   return items;
 }
 
-export function getAllPosts(fields: Fields[] = []) {
+export function getAllPosts(fields: Array<keyof IPost> = []) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))

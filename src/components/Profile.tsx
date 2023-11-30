@@ -19,9 +19,8 @@ export default function Profile() {
           src={images.me}
           alt="me"
           fill
-          objectFit="cover"
           placeholder="blur"
-          className="rounded-full"
+          className="rounded-full object-cover"
         />
       </div>
       <div className="ml-0 flex flex-col items-center sm:block sm:ml-5">

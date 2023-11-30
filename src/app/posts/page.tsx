@@ -11,6 +11,7 @@ export default function Page() {
   const allPosts = getAllPosts([
     "slug",
     "title",
+    "author",
     "date",
     "coverImage",
     "content",
