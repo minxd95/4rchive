@@ -12,6 +12,7 @@ import SearchPostsTemplate from "@/components/SearchPostsTemplate";
 import SearchBar from "@/components/SearchBar";
 import TableOfContents from "@/components/TableOfContents";
 import Profile from "@/components/Profile";
+import AnimatedPage from "@/components/AnimatedPage";
 
 export {
   Header,
@@ -28,4 +29,5 @@ export {
   SearchBar,
   TableOfContents,
   Profile,
+  AnimatedPage,
 };

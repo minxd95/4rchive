@@ -1,4 +1,4 @@
-import { SearchPostsTemplate } from "@/components";
+import { AnimatedPage, SearchPostsTemplate } from "@/components";
 import { getAllPosts } from "@/lib/api";
 import { Metadata } from "next";
 
@@ -18,5 +18,9 @@ export default function Page() {
     "excerpt",
   ]);
 
-  return <SearchPostsTemplate allPosts={allPosts} />;
+  return (
+    <AnimatedPage>
+      <SearchPostsTemplate allPosts={allPosts} />
+    </AnimatedPage>
+  );
 }
