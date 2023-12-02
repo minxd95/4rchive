@@ -13,6 +13,7 @@ import SearchBar from "@/components/SearchBar";
 import TableOfContents from "@/components/TableOfContents";
 import Profile from "@/components/Profile";
 import AnimatedPage from "@/components/AnimatedPage";
+import SVGIcon from "@/components/SVGIcon";
 
 export {
   Header,
@@ -30,4 +31,5 @@ export {
   TableOfContents,
   Profile,
   AnimatedPage,
+  SVGIcon,
 };

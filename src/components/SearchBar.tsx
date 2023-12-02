@@ -1,33 +1,18 @@
 "use client";
 
-import images from "@/assets/images";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import { ChangeEventHandler, useEffect, useState } from "react";
+import { SVGIcon } from "@/components";
+import { ChangeEventHandler } from "react";
 
 interface SearchBarProps {
   onChange: ChangeEventHandler<HTMLInputElement>;
   value: string;
 }
 export default function SearchBar({ onChange, value }: SearchBarProps) {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
   return (
     <div className="flex px-2.5 items-center mx-auto max-w-[25.625rem] h-9 sm:h-10 rounded-[1.24rem] border border-black dark:border-white">
-      <Image
-        src={
-          mounted && resolvedTheme === "light"
-            ? images.searchBlack
-            : images.searchWhite
-        }
-        alt="search icon"
-        width={24}
-        height={24}
-        className="mr-5"
-      />
+      <div className="mr-5">
+        <SVGIcon.search width="24" height="24" />
+      </div>
       <input
         type="text"
         placeholder="Search"

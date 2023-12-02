@@ -18,17 +18,14 @@ export default async function Home() {
 
   return (
     <AnimatedPage>
-      <div className="max-w-[58.25rem] mx-auto px-4">
+      <div className="max-w-[50rem] mx-auto px-4">
         <div className="mt-[2rem] sm:mt-[4.5rem]">
-          <PageTitleText
-            title="Welcome to 4rchive :)"
-            subTitle="Minseok’s Tech Blog"
-          />
+          <PageTitleText title="Welcome to 4rchive :)" />
         </div>
-        <RecentPostList posts={posts} />
-        <div className="flex justify-center mt-20 mb-0 sm:mt-20 sm:mb-20">
+        <div className="mt-[3rem]">
           <Profile />
         </div>
+        <RecentPostList posts={posts} />
       </div>
     </AnimatedPage>
   );

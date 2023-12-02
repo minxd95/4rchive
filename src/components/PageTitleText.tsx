@@ -5,7 +5,7 @@ export default function PageTitleText({
   subTitle,
 }: {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }) {
   return (
     <div className="flex flex-col items-center">
@@ -14,9 +14,11 @@ export default function PageTitleText({
       >
         {title}
       </span>
-      <span className="mt-2 sm:mt-4 font-medium text-base lg:text-[1.25rem] transition-[font-size] duration-200">
-        {subTitle}
-      </span>
+      {subTitle && (
+        <span className="mt-2 sm:mt-4 font-medium text-base lg:text-[1.25rem] transition-[font-size] duration-200">
+          {subTitle}
+        </span>
+      )}
     </div>
   );
 }

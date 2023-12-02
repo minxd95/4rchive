@@ -2,16 +2,9 @@
 
 import Image from "next/image";
 import images from "@/assets/images";
-import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { SVGIcon } from "@/components";
 
 export default function Profile() {
-  const { resolvedTheme } = useTheme();
-
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
   return (
     <div className="flex flex-col sm:flex-row items-center">
       <div className="relative w-[7.5rem] h-[7.5rem]">
@@ -31,30 +24,8 @@ export default function Profile() {
           함께 일하고 싶은 사람이 되기 위해 항상 노력하고 있습니다.
         </p>
         <div className="flex gap-3 mt-[1.25rem] sm:mt-2">
-          {mounted && (
-            <>
-              <Image
-                src={
-                  resolvedTheme === "light"
-                    ? images.githubBlack
-                    : images.githubWhite
-                }
-                alt="github"
-                width={24}
-                height={24}
-              />
-              <Image
-                src={
-                  resolvedTheme === "light"
-                    ? images.instaBlack
-                    : images.instaWhite
-                }
-                alt="github"
-                width={24}
-                height={24}
-              />
-            </>
-          )}
+          <SVGIcon.github />
+          <SVGIcon.instagram />
         </div>
       </div>
     </div>
