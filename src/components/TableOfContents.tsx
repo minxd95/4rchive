@@ -29,7 +29,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
               }}
               className={`leading-relaxed transition-[color,transform] duration-150 ${
                 heading.id === activeId
-                  ? "text-gray-700 dark:text-gray-50 -translate-x-1"
+                  ? "-translate-x-1"
                   : "text-gray-400 dark:text-gray-500"
               }`}
             >
