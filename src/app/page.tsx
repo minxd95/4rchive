@@ -1,5 +1,5 @@
 import {
-  RecentPostList,
+  PostList,
   PageTitleText,
   Profile,
   AnimatedPage,
@@ -45,7 +45,7 @@ export default async function Home() {
           <div className=" absolute -right-[12.25rem] top-12">
             <TagList tags={tags} />
           </div>
-          <RecentPostList posts={posts} />
+          <PostList posts={posts} />
         </div>
       </div>
     </AnimatedPage>

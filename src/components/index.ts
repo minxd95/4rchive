@@ -3,7 +3,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import Providers from "@/components/Providers";
 import PageTitleText from "@/components/PageTitleText";
 import ShowMoreButton from "@/components/ShowMoreButton";
-import RecentPostList from "@/components/RecentPostList";
+import PostList from "@/components/PostList";
 import PostItem from "@/components/PostItem";
 import PostBody from "@/components/PostBody";
 import SearchPageTemplate from "@/components/SearchPageTemplate";
@@ -22,7 +22,7 @@ export {
   Providers,
   PageTitleText,
   ShowMoreButton,
-  RecentPostList,
+  PostList,
   PostItem,
   PostBody,
   SearchPageTemplate,

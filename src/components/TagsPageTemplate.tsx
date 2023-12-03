@@ -1,6 +1,6 @@
 "use client";
 
-import { PageTitleText, PostItem, Tag } from "@/components";
+import { PageTitleText, PostList, Tag } from "@/components";
 import { TSearchPostItem } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -61,11 +61,7 @@ export default function TagsPageTemplate({
               </button>
             ))}
           </div>
-          <div className="flex justify-between flex-wrap gap-y-12 mt-[2.5rem] sm:mt-[4.5rem]">
-            {filteredList.map((post) => (
-              <PostItem key={post.slug} post={post} />
-            ))}
-          </div>
+          <PostList posts={filteredList} />
         </div>
       </div>
     </div>

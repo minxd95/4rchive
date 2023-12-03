@@ -1,6 +1,6 @@
 "use client";
 
-import { PageTitleText, PostItem, SearchBar } from "@/components";
+import { PageTitleText, PostList, SearchBar } from "@/components";
 import { TSearchPostItem } from "@/types";
 import { useEffect, useState } from "react";
 
@@ -49,11 +49,7 @@ export default function SearchPageTemplate({
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           />
-          <div className="flex justify-between flex-wrap gap-y-12 mt-[2.5rem] sm:mt-[4.5rem]">
-            {filteredList.map((post) => (
-              <PostItem key={post.slug} post={post} />
-            ))}
-          </div>
+          <PostList posts={filteredList} />
         </div>
       </div>
     </div>

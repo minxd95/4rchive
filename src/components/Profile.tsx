@@ -3,6 +3,7 @@
 import Image from "next/image";
 import images from "@/assets/images";
 import { SVGIcon } from "@/components";
+import Link from "next/link";
 
 export default function Profile() {
   return (
@@ -21,8 +22,12 @@ export default function Profile() {
           함께 일하고 싶은 사람이 되기 위해 항상 노력하고 있습니다.
         </p>
         <div className="flex gap-3 mt-[1.25rem] sm:mt-2">
-          <SVGIcon.github />
-          <SVGIcon.instagram />
+          <Link href="https://github.com/minxd95" target="_blank">
+            <SVGIcon.github />
+          </Link>
+          <Link href="https://www.instagram.com/smin_stone_/" target="_blank">
+            <SVGIcon.instagram />
+          </Link>
         </div>
       </div>
     </div>
