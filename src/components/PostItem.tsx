@@ -1,13 +1,18 @@
+"use client";
+
 import { format, parseISO } from "date-fns";
 import { TPostItem } from "@/types";
 import Image from "next/image";
 import { Tag } from "@/components";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface PostItemProps {
   post: TPostItem;
 }
 export default function PostItem({ post }: PostItemProps) {
+  const router = useRouter();
+
   const parsedDate = format(parseISO(post.date), "yyyy년 M월 dd일");
 
   return (
@@ -36,9 +41,15 @@ export default function PostItem({ post }: PostItemProps) {
       {post.tags && (
         <div className="flex mt-4 gap-x-2 gap-y-[0.625rem]">
           {post.tags.map((tag, index) => (
-            <Link key={tag} href={`/tags?filter=${tag}`}>
+            <button
+              key={tag}
+              onClick={(e) => {
+                e.preventDefault();
+                router.push(`/tags?filter=${tag}`);
+              }}
+            >
               <Tag key={index} text={tag} />
-            </Link>
+            </button>
           ))}
         </div>
       )}

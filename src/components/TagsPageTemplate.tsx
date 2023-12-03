@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 interface TagsPageTemplateProps {
   allPosts: TSearchPostItem[];
-  allTags: string[];
+  allTags: [string, number][];
 }
 export default function TagsPageTemplate({
   allPosts,
@@ -45,16 +45,19 @@ export default function TagsPageTemplate({
           <div className="flex flex-wrap justify-center gap-x-2 gap-y-[0.625rem]">
             {allTags.map((tag) => (
               <button
-                key={tag}
+                key={tag[0]}
                 onClick={() => {
-                  if (filter === tag) {
+                  if (filter === tag[0]) {
                     router.push("?filter=");
                     return;
                   }
-                  router.push(`?filter=${tag}`);
+                  router.push(`?filter=${tag[0]}`);
                 }}
               >
-                <Tag text={tag} selected={filter === tag} />
+                <Tag
+                  text={`${tag[0]} (${tag[1]})`}
+                  selected={filter === tag[0]}
+                />
               </button>
             ))}
           </div>

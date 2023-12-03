@@ -1,10 +1,11 @@
-import { AnimatedPage, PostBody, TableOfContents } from "@/components";
+import { AnimatedPage, PostBody, TableOfContents, Tag } from "@/components";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
 import getTableOfContents from "@/lib/getTableOfContents";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { format, parseISO } from "date-fns";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug, [
@@ -15,6 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     "content",
     "ogImage",
     "coverImage",
+    "tags",
   ]);
   const content = await markdownToHtml(post.content || "");
   const headings = getTableOfContents(content);
@@ -33,6 +35,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 &nbsp;·&nbsp;{format(parseISO(post.date), "yyyy년 M월 dd일")}
               </span>
             </div>
+            {post.tags && (
+              <div className="flex mt-4 gap-x-2 gap-y-[0.625rem]">
+                {post.tags.map((tag, index) => (
+                  <Link key={tag} href={`/tags?filter=${tag}`}>
+                    <Tag key={index} text={tag} />
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
           <div className="mt-5">
             <div className="relative w-full aspect-video">

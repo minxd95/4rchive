@@ -18,15 +18,19 @@ export default function Page() {
     "tags",
   ]);
 
-  const setOfTags = new Set<string>();
+  const tagCounts: { [key: string]: number } = {};
 
-  allPosts.forEach((post) => {
-    if (post.tags) {
-      post.tags.forEach((tag) => setOfTags.add(tag));
-    }
-  });
+  allPosts.forEach((post) =>
+    post.tags?.forEach((tag) => {
+      if (tagCounts[tag]) {
+        tagCounts[tag] += 1;
+      } else {
+        tagCounts[tag] = 1;
+      }
+    })
+  );
 
-  const allTags: string[] = Array.from(setOfTags);
+  const allTags = Object.entries(tagCounts);
 
   return (
     <AnimatedPage>
