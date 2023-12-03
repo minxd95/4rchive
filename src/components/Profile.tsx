@@ -7,15 +7,12 @@ import { SVGIcon } from "@/components";
 export default function Profile() {
   return (
     <div className="flex flex-col sm:flex-row items-center">
-      <div className="relative w-[7.5rem] h-[7.5rem]">
-        <Image
-          src={images.me}
-          alt="me"
-          fill
-          placeholder="blur"
-          className="rounded-full object-cover"
-        />
-      </div>
+      <Image
+        src={images.me}
+        alt="me"
+        placeholder="blur"
+        className="w-[7.5rem] h-[7.5rem] rounded-full object-cover"
+      />
       <div className="ml-0 flex flex-col items-center sm:block sm:ml-5">
         <p className="font-bold mt-2 sm:mt-0">서민석(Minseok Seo)</p>
         <p className="leading-6 mt-[1.0625rem] hidden sm:block">

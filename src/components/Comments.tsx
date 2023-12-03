@@ -27,7 +27,7 @@ export default function Comments() {
       inputPosition="top"
       theme={resolvedTheme}
       lang="ko"
-      loading="lazy"
+      loading="eager"
     />
   );
 }

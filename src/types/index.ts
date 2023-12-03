@@ -7,14 +7,15 @@ export interface IPost {
   author: string;
   ogImage: string;
   content: string;
+  tags: string[];
 }
 
 export type TPostItem = Pick<
   IPost,
-  "slug" | "title" | "author" | "date" | "coverImage" | "excerpt"
+  "slug" | "title" | "author" | "date" | "coverImage" | "excerpt" | "tags"
 >;
 
 export type TSearchPostItem = Pick<
   IPost,
-  "slug" | "title" | "author" | "date" | "coverImage" | "content" | "excerpt"
+  "slug" | "title" | "author" | "date" | "coverImage" | "excerpt" | "tags"
 >;

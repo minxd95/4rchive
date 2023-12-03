@@ -1,10 +1,11 @@
 ---
-title: "Dynamic Routing and Static Generation 3"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
+title: "국가는 농지에 관하여 경자유전의 원칙이 달성될 수 있도록 노력하여"
+excerpt: "국가는 평생교육을 진흥하여야 한다. 헌법에 의하여 체결·공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다. 국가는 농지에 관하여 경자유전의 원칙이 달성될 수 있도록 노력하여야 하며, 농지의 소작제도는 금지된다."
 coverImage: "/images/post/dynamic-routing/cover.png"
 date: "2020-03-16T05:35:07.322Z"
 author: "Minseok Seo"
 ogImage: "/images/post/dynamic-routing/cover.png"
+tags: ["React", "Hook", "Develop"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

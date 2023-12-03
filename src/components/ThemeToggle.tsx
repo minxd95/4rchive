@@ -17,7 +17,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="relative w-[3.75rem] h-[2rem] rounded-[1rem] border border-black dark:border-white flex items-center"
+      className="relative w-[3.75rem] h-[2rem] rounded-[1rem] border border-slate-600 dark:border-slate-200 flex items-center"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       <div className="absolute left-2 w-4 h-4">
@@ -27,7 +27,7 @@ export default function ThemeToggle() {
         <SVGIcon.sun />
       </div>
       <div
-        className={`w-6 h-6 rounded-full bg-black dark:bg-white absolute transition-[left,background] duration-200 left-[0.1875rem] dark:left-[1.9375rem]`}
+        className={`w-6 h-6 rounded-full bg-slate-800 dark:bg-slate-50 absolute transition-[left,background] duration-200 left-[0.1875rem] dark:left-[1.9375rem]`}
       />
     </button>
   );

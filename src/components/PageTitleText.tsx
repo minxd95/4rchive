@@ -10,7 +10,7 @@ export default function PageTitleText({
   return (
     <div className="flex flex-col items-center">
       <span
-        className={`${inter.className} font-bold !italic text-[1.5rem] sm:text-[3rem] lg:text-[4.5rem] transition-[font-size] duration-200`}
+        className={`${inter.className} font-bold !italic text-[1.75rem] sm:text-[3rem] lg:text-[4.5rem] transition-[font-size] duration-200`}
       >
         {title}
       </span>

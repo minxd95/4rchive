@@ -1,4 +1,4 @@
-import { AnimatedPage, SearchPostsTemplate } from "@/components";
+import { AnimatedPage, TagsPageTemplate } from "@/components";
 import { getAllPosts } from "@/lib/api";
 import { Metadata } from "next";
 
@@ -14,13 +14,23 @@ export default function Page() {
     "author",
     "date",
     "coverImage",
-    "content",
     "excerpt",
+    "tags",
   ]);
+
+  const setOfTags = new Set<string>();
+
+  allPosts.forEach((post) => {
+    if (post.tags) {
+      post.tags.forEach((tag) => setOfTags.add(tag));
+    }
+  });
+
+  const allTags: string[] = Array.from(setOfTags);
 
   return (
     <AnimatedPage>
-      <SearchPostsTemplate allPosts={allPosts} />
+      <TagsPageTemplate allPosts={allPosts} allTags={allTags} />
     </AnimatedPage>
   );
 }

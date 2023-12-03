@@ -5,15 +5,16 @@ import PageTitleText from "@/components/PageTitleText";
 import ShowMoreButton from "@/components/ShowMoreButton";
 import RecentPostList from "@/components/RecentPostList";
 import PostItem from "@/components/PostItem";
-import MenuButton from "@/components/MenuButton";
 import PostBody from "@/components/PostBody";
-import Menu from "@/components/Menu";
-import SearchPostsTemplate from "@/components/SearchPostsTemplate";
+import SearchPageTemplate from "@/components/SearchPageTemplate";
 import SearchBar from "@/components/SearchBar";
 import TableOfContents from "@/components/TableOfContents";
 import Profile from "@/components/Profile";
 import AnimatedPage from "@/components/AnimatedPage";
 import SVGIcon from "@/components/SVGIcon";
+import Tag from "@/components/Tag";
+import TagList from "@/components/TagList";
+import TagsPageTemplate from "@/components/TagsPageTemplate";
 
 export {
   Header,
@@ -23,13 +24,14 @@ export {
   ShowMoreButton,
   RecentPostList,
   PostItem,
-  MenuButton,
   PostBody,
-  Menu,
-  SearchPostsTemplate,
+  SearchPageTemplate,
   SearchBar,
   TableOfContents,
   Profile,
   AnimatedPage,
   SVGIcon,
+  Tag,
+  TagList,
+  TagsPageTemplate,
 };

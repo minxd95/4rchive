@@ -21,23 +21,28 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <AnimatedPage>
-      <div className="flex max-w-[70.75rem] mx-auto px-4">
+      <div className="flex max-w-[70.75rem] mx-auto px-4 pb-12 sm:pb-36">
         <div className="flex flex-col">
           <div className="flex flex-col">
-            <span className="mt-[2.25rem] sm:mt-[4.5rem] text-[2.25rem] font-extrabold leading-[2.75rem] break-all">
+            <span className="mt-[2.25rem] sm:mt-[4.5rem] text-2xl sm:text-4xl sm:leading-snug font-extrabold break-all">
               {post.title}
             </span>
-            <span className="mt-2 font-bold">
-              {format(parseISO(post.date), "yyyy. MM. dd.")}
-            </span>
+            <div className="mt-2 font-medium">
+              <span>{post.author}</span>
+              <span className="text-slate-400">
+                &nbsp;·&nbsp;{format(parseISO(post.date), "yyyy년 M월 dd일")}
+              </span>
+            </div>
           </div>
           <div className="mt-5">
-            <div className="relative w-full aspect-[3/2]">
+            <div className="relative w-full aspect-video">
               <Image
                 src={post.coverImage}
                 alt="hero"
                 className="rounded-[1.25rem] object-cover"
                 fill
+                sizes="100vw"
+                priority
               />
             </div>
             <PostBody content={content} />
