@@ -33,7 +33,7 @@ export default function PostList({ posts }: RecentPostListProps) {
   }, [posts]);
 
   return (
-    <div className="mt-[2.5rem] sm:mt-[4.5rem] flex flex-col gap-y-12">
+    <div className="flex flex-col gap-y-12">
       {posts.slice(0, displayedPostCount).map((post, idx, origin) => {
         if (origin.length === idx + 1) {
           return (

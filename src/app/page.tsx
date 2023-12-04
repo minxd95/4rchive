@@ -29,14 +29,16 @@ export default async function Home() {
   return (
     <AnimatedPage>
       <div className="max-w-[50rem] mx-auto px-4 pb-12 sm:pb-36">
-        <div className="mt-[3rem] flex">
+        <div className="mt-4 sm:mt-12 flex justify-center sm:justify-start">
           <Profile />
         </div>
         <div className="relative">
           <div className="absolute -left-[12.25rem] top-12 hidden xl:block">
             <TagList tags={tags} />
           </div>
-          <PostList posts={posts} />
+          <div className="mt-[2.5rem] sm:mt-[3rem]">
+            <PostList posts={posts} />
+          </div>
         </div>
       </div>
     </AnimatedPage>

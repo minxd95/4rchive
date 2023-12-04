@@ -61,7 +61,9 @@ export default function TagsPageTemplate({
               </button>
             ))}
           </div>
-          <PostList posts={filteredList} />
+          <div className="mt-[2.5rem] sm:mt-[4.5rem]">
+            <PostList posts={filteredList} />
+          </div>
         </div>
       </div>
     </div>

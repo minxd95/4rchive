@@ -49,7 +49,9 @@ export default function SearchPageTemplate({
             onChange={(e) => setFilter(e.target.value)}
             value={filter}
           />
-          <PostList posts={filteredList} />
+          <div className="mt-[2.5rem] sm:mt-[4.5rem]">
+            <PostList posts={filteredList} />
+          </div>
         </div>
       </div>
     </div>
