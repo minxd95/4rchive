@@ -80,11 +80,14 @@ export async function generateMetadata({
   const slug = params.slug;
 
   // fetch data
-  const post = getPostBySlug(slug, ["title", "excerpt"]);
+  const post = getPostBySlug(slug, ["title", "excerpt", "coverImage"]);
 
   return {
     title: post.title,
     description: post.excerpt,
+    openGraph: {
+      images: [post.coverImage],
+    },
   };
 }
 
