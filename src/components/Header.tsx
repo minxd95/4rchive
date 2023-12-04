@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 const SCROLL_THROTTLE = 50;
 
 export default function Header() {
+  // todo: 메뉴관련 로직 제거
   const { hideMenu } = useMenu();
 
   const [scrollY, setScrollY] = useState<number>(0);
@@ -47,23 +48,25 @@ export default function Header() {
 
   return (
     <header
-      className={`border-b-2 border-slate-200 dark:border-slate-700 bg-inherit fixed h-[3.75rem] sm:h-[4.5rem] w-screen flex justify-between items-center px-4 sm:px-5 ${
+      className={`border-b-2 border-slate-200 dark:border-slate-700 bg-inherit fixed h-[3.75rem] sm:h-[4.5rem] w-screen px-4 ${
         isHideHeader ? "-top-[3.75rem] sm:-top-[4.5rem]" : "top-0"
       } transition-[height,top] duration-200 z-10`}
     >
-      <div className="flex gap-9 items-baseline">
-        <Link href="/" onClick={() => hideMenu()}>
-          <span
-            className={`${inter.className} text-[1.25rem] sm:text-[1.75rem] font-bold !italic transition-[font-size] duration-200`}
-          >
-            4rchive :)
-          </span>
-        </Link>
-      </div>
-      <div className="flex items-center gap-3">
-        <CircleButton href="/tags" icon={<SVGIcon.tag />} />
-        <CircleButton href="/search" icon={<SVGIcon.search />} />
-        <ThemeToggle />
+      <div className="mx-auto max-w-7xl h-full flex justify-between items-center">
+        <div className="flex gap-9 items-baseline">
+          <Link href="/" onClick={() => hideMenu()}>
+            <span
+              className={`${inter.className} text-[1.25rem] sm:text-[1.75rem] font-bold !italic transition-[font-size] duration-200`}
+            >
+              4rchive :)
+            </span>
+          </Link>
+        </div>
+        <div className="flex items-center gap-3">
+          <CircleButton href="/tags" icon={<SVGIcon.tag />} />
+          <CircleButton href="/search" icon={<SVGIcon.search />} />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

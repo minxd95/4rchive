@@ -35,14 +35,11 @@ export default async function Home() {
   return (
     <AnimatedPage>
       <div className="max-w-[50rem] mx-auto px-4 pb-12 sm:pb-36">
-        <div className="mt-[2rem] sm:mt-[4.5rem]">
-          <PageTitleText title="Welcome to 4rchive :)" />
-        </div>
         <div className="mt-[3rem] flex justify-center">
           <Profile />
         </div>
         <div className="relative">
-          <div className=" absolute -right-[12.25rem] top-12">
+          <div className=" absolute -right-[12.25rem] top-12 hidden xl:block">
             <TagList tags={tags} />
           </div>
           <PostList posts={posts} />
