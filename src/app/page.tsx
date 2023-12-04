@@ -39,7 +39,7 @@ export default async function Home() {
           <Profile />
         </div>
         <div className="relative">
-          <div className=" absolute -right-[12.25rem] top-12 hidden xl:block">
+          <div className="absolute -left-[12.25rem] top-12 hidden xl:block">
             <TagList tags={tags} />
           </div>
           <PostList posts={posts} />
