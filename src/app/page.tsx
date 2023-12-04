@@ -1,10 +1,4 @@
-import {
-  PostList,
-  PageTitleText,
-  Profile,
-  AnimatedPage,
-  TagList,
-} from "@/components";
+import { PostList, Profile, AnimatedPage, TagList } from "@/components";
 import { getAllPosts } from "@/lib/api";
 
 export default async function Home() {
@@ -35,7 +29,7 @@ export default async function Home() {
   return (
     <AnimatedPage>
       <div className="max-w-[50rem] mx-auto px-4 pb-12 sm:pb-36">
-        <div className="mt-[3rem] flex justify-center">
+        <div className="mt-[3rem] flex">
           <Profile />
         </div>
         <div className="relative">

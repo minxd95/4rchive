@@ -1,18 +1,18 @@
 "use client";
 
-import Image from "next/image";
-import images from "@/assets/images";
 import { SVGIcon } from "@/components";
 import Link from "next/link";
+import Lottie from "react-lottie-player";
+import profileAnimation from "@/assets/lottie/profileAnimation.json";
 
 export default function Profile() {
   return (
     <div className="flex flex-col sm:flex-row items-center">
-      <Image
-        src={images.me}
-        alt="me"
-        placeholder="blur"
-        className="w-[7.5rem] h-[7.5rem] rounded-full object-cover"
+      <Lottie
+        loop
+        animationData={profileAnimation}
+        play
+        className="w-44 h-44 mr-6"
       />
       <div className="ml-0 flex flex-col items-center sm:block sm:ml-5">
         <p className="font-bold mt-2 sm:mt-0">서민석(Minseok Seo)</p>
