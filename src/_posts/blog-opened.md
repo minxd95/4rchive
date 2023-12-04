@@ -5,6 +5,7 @@ coverImage: "/images/post/blog-opened/cover.jpg"
 date: "2023-12-04T19:47:06.687Z"
 author: Minseok Seo
 ogImage: "/images/post/blog-opened/cover.jpg"
+tags: ["Hello"]
 ---
 
 ## Hello
