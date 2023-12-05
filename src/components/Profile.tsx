@@ -16,7 +16,7 @@ export default function Profile() {
       />
       <div className="ml-0 flex flex-col items-center sm:block sm:ml-5">
         <p className="font-bold mt-2 sm:mt-0">서민석(Minseok Seo)</p>
-        <p className="leading-6 mt-[1.0625rem] hidden sm:block">
+        <p className="leading-7 mt-[1.0625rem] hidden sm:block">
           더 좋은 개발을 위한 끊임없는 탐구를 중요하게 생각합니다.
           <br />
           함께 일하고 싶은 사람이 되기 위해 항상 노력하고 있습니다.
