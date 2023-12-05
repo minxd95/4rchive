@@ -32,7 +32,7 @@ export default function SearchPageTemplate({
   }, [filter, allPosts]);
 
   return (
-    <div className="max-w-[48rem] mx-auto px-4 pb-12 sm:pb-36">
+    <div className="max-w-[50rem] mx-auto px-4 pb-12 sm:pb-36">
       <div className="mt-[2rem] sm:mt-[4.5rem]">
         <PageTitleText
           title="Search"

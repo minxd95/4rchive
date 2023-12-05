@@ -23,8 +23,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <AnimatedPage>
-      <div className="flex max-w-[70.75rem] mx-auto px-4 pb-12 sm:pb-36">
-        <div className="flex flex-col">
+      <div className="flex justify-center px-4 pb-12 sm:pb-36">
+        <div className="flex flex-col basis-[48rem]">
           <div className="flex flex-col">
             <span className="mt-[2.25rem] sm:mt-[4.5rem] text-2xl sm:text-4xl sm:leading-snug font-extrabold break-all">
               {post.title}
@@ -52,7 +52,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 alt="hero"
                 className="rounded-[1.25rem] object-cover"
                 fill
-                sizes="100vw"
+                sizes="(max-width: 50rem) 100vw, 50rem"
                 priority
               />
             </div>
@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </div>
         </div>
         <div className="hidden lg:block">
-          <div className="sticky w-[15.625rem] ml-[7.5rem] top-[9.375rem]">
+          <div className="sticky w-52 ml-[7.5rem] top-[12rem]">
             <TableOfContents headings={headings} />
           </div>
         </div>

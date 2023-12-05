@@ -26,7 +26,7 @@ export default function PostItem({ post }: PostItemProps) {
           alt="cover image"
           className="rounded-3xl object-cover"
           fill
-          sizes="100vw"
+          sizes="(max-width: 50rem) 100vw, 50rem"
           priority
         />
       </div>
