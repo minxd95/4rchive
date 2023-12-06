@@ -2,8 +2,8 @@
 title: "기술블로그를 오픈했습니다"
 excerpt: "안녕하세요. 서민석입니다. 앞으로 커리어를 쌓아가며 얻는 지식들과 경험들을 정리하고 공유할 기술블로그를 오픈했습니다."
 coverImage: "/images/post/blog-opened/cover.jpg"
-date: "2023-12-04T19:47:06.687Z"
-author: Minseok Seo
+date: "2023-12-05 22:00:00"
+author: "Minseok Seo"
 ogImage: "/images/post/blog-opened/cover.jpg"
 tags: ["Hello"]
 ---

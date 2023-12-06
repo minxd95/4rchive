@@ -1,0 +1,20 @@
+{
+  "Blog Post Template": {
+    "scope": "markdown",
+    "prefix": "blogpost",
+    "body": [
+      "---",
+      "title: \"$1\"",
+      "excerpt: \"$2\"",
+      "coverImage: \"/images/post/$TM_FILENAME_BASE/cover.png\"",
+      "date: \"$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND\"",
+      "author: \"Minseok Seo\"",
+      "ogImage: \"/images/post/$TM_FILENAME_BASE/cover.png\"",
+      "tags: [\"$3\"]",
+      "---",
+      "",
+      "$0"
+    ],
+    "description": "Template for a blog post"
+  }
+}

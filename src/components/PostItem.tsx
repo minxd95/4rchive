@@ -13,7 +13,7 @@ interface PostItemProps {
 export default function PostItem({ post }: PostItemProps) {
   const router = useRouter();
 
-  const parsedDate = format(parseISO(post.date), "yyyy년 M월 dd일");
+  const parsedDate = format(new Date(post.date), "yyyy년 M월 dd일");
 
   return (
     <Link

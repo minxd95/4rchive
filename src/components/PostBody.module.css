@@ -6,7 +6,7 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-6;
+  @apply my-[1.125rem];
 }
 
 .markdown h1 {
@@ -42,4 +42,20 @@
   counter-increment: li-counter; /* 카운터 증가 */
   display: inline-block; /* 인라인 블록으로 표시 */
   width: 1em; /* 너비 설정 */
+}
+
+.markdown blockquote {
+  @apply m-0 py-0 px-4 border-l-4 border-slate-200;
+}
+
+:global(.dark) .markdown blockquote {
+  @apply border-slate-600;
+}
+
+.markdown blockquote p {
+  @apply mt-0 mb-4;
+}
+
+.markdown blockquote p:last-child {
+  @apply mb-0;
 }

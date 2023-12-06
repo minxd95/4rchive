@@ -29,10 +29,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <span className="mt-[2.25rem] sm:mt-[4.5rem] text-2xl sm:text-4xl sm:leading-snug font-extrabold break-all">
               {post.title}
             </span>
-            <div className="mt-2 font-medium">
-              <span>{post.author}</span>
+            <div className="mt-2">
+              <span className="font-medium">{post.author}</span>
               <span className="text-slate-400">
-                &nbsp;·&nbsp;{format(parseISO(post.date), "yyyy년 M월 dd일")}
+                &nbsp;·&nbsp;{format(new Date(post.date), "yyyy년 M월 dd일")}
               </span>
             </div>
             {post.tags && (
@@ -59,7 +59,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <PostBody content={content} />
           </div>
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden [@media(min-width:70.5rem)]:block">
           <div className="sticky w-52 ml-[7.5rem] top-[12rem]">
             <TableOfContents headings={headings} />
           </div>
