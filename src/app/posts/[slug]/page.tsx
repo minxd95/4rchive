@@ -26,9 +26,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <div className="flex justify-center px-4 pb-12 sm:pb-36">
         <div className="flex flex-col basis-[48rem]">
           <div className="flex flex-col">
-            <span className="mt-[2.25rem] sm:mt-[4.5rem] text-2xl sm:text-4xl sm:leading-snug font-extrabold break-all">
+            <h1 className="mt-[2.25rem] sm:mt-[4.5rem] text-2xl sm:text-4xl sm:leading-snug font-extrabold break-all">
               {post.title}
-            </span>
+            </h1>
             <div className="mt-2">
               <span className="font-medium">{post.author}</span>
               <span className="text-slate-400">
