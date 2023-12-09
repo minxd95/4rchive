@@ -3,6 +3,7 @@ import "./globals.css";
 import { pretendard } from "@/assets/fonts";
 import { Header, Providers } from "@/components";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "4rchive - Minseok's tech blog",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Header />
           <main className="min-w-screen min-h-screen pt-[3.75rem] sm:pt-[4.5rem] pb-[7.25rem] z-0">
             {children}
+            <Analytics />
           </main>
           <Footer />
         </Providers>
