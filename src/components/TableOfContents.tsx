@@ -15,7 +15,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
 
   return (
     <div>
-      <span className="font-bold text-xl">Table Of Contents</span>
+      <span className="font-bold text-xl">목차</span>
       <ul className="mt-4">
         {headings.map((heading, index, origin) => {
           const nextHeading = origin[index + 1];

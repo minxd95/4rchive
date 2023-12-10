@@ -1,5 +1,6 @@
 import addIdsToHeadings from "@/lib/addIdsToHeadings";
 import rehypeHighlight from "rehype-highlight";
+import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
@@ -10,7 +11,8 @@ export default async function markdownToHtml(markdown: string) {
   const html = await unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(markdown);
