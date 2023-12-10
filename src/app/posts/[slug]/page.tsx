@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </div>
         </div>
         <div className="hidden [@media(min-width:70.5rem)]:block">
-          <div className="sticky w-52 ml-[7.5rem] top-[12rem]">
+          <div className="sticky w-52 ml-[7.5rem] top-[10rem]">
             <TableOfContents headings={headings} />
           </div>
         </div>
