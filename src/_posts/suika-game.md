@@ -376,7 +376,7 @@ Events.on(engine, "collisionStart", (event) => {
 
 자바스크립트를 사용한 물리 시뮬레이션이나 게임제작에 관심이 있는 분이라면 겁먹지 말고 따라해보는 것을 추천한다.
 
-> 참고한 영상 : https://www.youtube.com/watch?v=LZvEDigv0Ww&list=PLvqo575pLkloPLsIQF5nNdDUPdT15oaF1&index=28
+> 참고한 영상 : https://www.youtube.com/watch?v=LZvEDigv0Ww
 
 ## main.ts 전체 코드
 
@@ -388,11 +388,9 @@ import fruits from "./fruits";
 const engine = Engine.create();
 const render = Render.create({
   engine,
-  // id가 app인 element를 컨테이너로 사용
   element: document.getElementById("app") as HTMLElement,
   options: {
     background: "white",
-    // false로 설정하지 않으면 화면에 wireframe(debug mode) 형태로 표시된다.
     wireframes: false,
     width: 620,
     height: 850,
@@ -401,21 +399,17 @@ const render = Render.create({
 
 const world = engine.world;
 
-// 벽을 정의해준다
 const walls = [
-  // matter-js에서는 x,y 좌표를 설정할 때 꼭짓점이 아닌 Body의 중앙을 기준으로 설정해야 한다.
   { x: 15, y: 395, width: 30, height: 790 },
   { x: 605, y: 395, width: 30, height: 790 },
   { x: 310, y: 820, width: 620, height: 60 },
 ].map((wall) =>
   Bodies.rectangle(wall.x, wall.y, wall.width, wall.height, {
-    // 벽은 중력의 영향을 받지 않고 고정되어 있어야 하므로, isStatic을 true로 설정
     isStatic: true,
     render: { fillStyle: "black" },
   })
 );
 
-// 한계선을 만들어준다. 과일이 여기에 닿으면 game over.
 const limitLine = Bodies.rectangle(310, 150, 620, 2, {
   isStatic: true,
   isSensor: true,
@@ -423,7 +417,6 @@ const limitLine = Bodies.rectangle(310, 150, 620, 2, {
   label: "limitLine",
 });
 
-// 만든 Body들을 World에 추가한다.
 World.add(world, [...walls, limitLine]);
 
 engine.gravity.y = 2;
