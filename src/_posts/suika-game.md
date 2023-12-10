@@ -16,7 +16,7 @@ JavaScript 2D물리엔진을 간단하게 다뤄볼 수 있는 재미있는 예�
 
 아래는 스트리머 **우주하마**님의 플레이 영상이다
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gCN4b4LoNn4?si=MJ8b9n7vMN2wlS2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin:0 auto;"></iframe>
+<iframe width="320" height="215" src="https://www.youtube.com/embed/gCN4b4LoNn4?si=MJ8b9n7vMN2wlS2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin:0 auto;"></iframe>
 
 본 예제에서는 적절한 이미지를 구하는 것이 번거롭기도 하고 로직구현에 의의를 두었기 때문에, 기본적인 원에 색깔만 다르게 입히는 형태로 구현했다.
 
