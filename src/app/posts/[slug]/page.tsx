@@ -91,6 +91,7 @@ export async function generateMetadata({
     title: post.title,
     description: post.excerpt,
     openGraph: {
+      type: "article",
       images: [`https://www.minseok.life${post.ogImage}`],
     },
   };
