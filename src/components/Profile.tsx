@@ -2,18 +2,22 @@
 
 import { SVGIcon } from "@/components";
 import Link from "next/link";
-import Lottie from "react-lottie-player";
 import profileAnimation from "@/assets/lottie/profileAnimation.json";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 export default function Profile() {
   return (
     <div className="flex flex-col sm:flex-row items-center">
-      <Lottie
-        loop
-        animationData={profileAnimation}
-        play
-        className="w-44 h-44 mr-6"
-      />
+      <div className="relative w-44 h-44 mr-6">
+        <Lottie
+          loop
+          animationData={profileAnimation}
+          play
+          className="absolute w-full h-full"
+        />
+      </div>
       <div className="ml-0 flex flex-col items-center sm:block sm:ml-5">
         <p className="font-bold mt-2 sm:mt-0">서민석(Minseok Seo)</p>
         <p className="leading-7 mt-[1.0625rem] hidden sm:block">
